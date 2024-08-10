@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>SheNurture - Nurturing Women's Health and Safety</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+
+
+
+  <!-- ... Previous code ... -->
+
+<div class="content container">
+  <div class="section">
+      <h2>Featured Health Resources</h2>
+      <div class="cards">
+          <div class="card">
+              <img src="hr1.jpg" alt="Health Resource 1">
+              <h3>Healthy Eating Habits</h3>
+              <p>Tips for maintaining a balanced diet and eating nutritious foods.</p>
+          </div>
+          <div class="card">
+              <img src="hr2.jpg" alt="Health Resource 2">
+              <h3>Yoga and Meditation</h3>
+              <p>Learn the benefits of yoga and meditation for overall well-being.</p>
+          </div>
+      </div>
+  </div>
+  <div class="section">
+      <h2>Safety Guides</h2>
+      <div class="cards">
+          <div class="card">
+              <img src="sg1.jpg" alt="Safety Guide 1">
+              <h3>Personal Safety Tips</h3>
+              <p>Practical advice for staying safe while walking alone or traveling.</p>
+          </div>
+          <div class="card">
+              <img src="sg2.jpg" alt="Safety Guide 2">
+              <h3>Cybersecurity Awareness</h3>
+              <p>Protecting your online identity and digital presence.</p>
+          </div>
+      </div>
+  </div>
+  <div class="section">
+      <h2>Community Forums</h2>
+      <div class="cards">
+          <div class="card">
+            <img src="cf1.jpg" alt="Community Forums 1">
+              <h3>Stress Management Techniques</h3>
+              <p>Share your experiences and tips for dealing with stress.</p>
+              <div class="comments">5 comments</div>
+          </div>
+          <div class="card">
+            <img src="cf2.jpg" alt="Community Forums 2">
+              <h3>Fitness Challenge Group</h3>
+              <p>Join our fitness challenge group and stay motivated together!</p>
+              <div class="comments">12 comments</div>
+          </div>
+      </div>
+  </div>
+  <div class="section">
+      <h2>Upcoming Events & Workshops</h2>
+      <div class="cards">
+          <div class="card">
+              <img src="ew1.jpg" alt="Event 1">
+              <h3>Women's Health Seminar</h3>
+              <p>Join us for an informative seminar on women's health topics.</p>
+              <div class="date">Date: June 25, 2023</div>
+              <div class="location">Location: Community Center</div>
+          </div>
+          <div class="card">
+              <img src="ew2.jpg" alt="Event 2">
+              <h3>Yoga Workshop</h3>
+              <p>Experience the benefits of yoga and mindfulness in this workshop.</p>
+              <div class="date">Date: July 10, 2023</div>
+              <div class="location">Location: Yoga Studio</div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- ... Rest of the code ... -->
+
+
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bx-won'></i>
+        <div class="logo_name">SHE NURTURE</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+          <i class='bx bx-search' ></i>
+         <input type="text" placeholder="Search...">
+         <span class="tooltip">Search</span>
+      </li>
+      <li>
+        <a href="time.jpg">
+          <i class='bx bx-user-circle' ></i>
+          <span class="links_name">PROFILE</span>
+        </a>
+        <span class="tooltip">Profile</span>
+      </li>
+      <li>
+       <a href="doctors.html">
+         <i class='bx bx-clinic' ></i>
+         <span class="links_name">HEALTH RESOURCES</span>
+       </a>
+       <span class="tooltip">Health</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-shield-quarter' ></i>
+         <span class="links_name">SAFETY GUIDES</span>
+       </a>
+       <span class="tooltip">Safety</span>
+     </li>
+     <li>
+       <a href="interactions.html">
+         <i class='bx bx-book-reader' ></i>
+         <span class="links_name">COMMUNITY FORUMS</span>
+       </a>
+       <span class="tooltip">Interactions</span>
+     </li>
+     <li>
+       <a href="challenge.html">
+         <i class='bx bx-calendar' ></i>
+         <span class="links_name">EVENTS & WORKSHOPS</span>
+       </a>
+       <span class="tooltip">Events</span>
+     </li>
+     <li class="profile">
+         <div class="profile-details">
+           <img src="women.jpg" alt="profileImg">
+           <div class="name_job">
+             <div class="name">She Nurture</div>
+             <div class="job">Log Out</div>
+           </div>
+         </div>
+         <i class='bx bx-log-out' id="log_out" ></i>
+     </li>
+    </ul>
+</div>
+
+
+
+
+
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+  searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+    sidebar.classList.toggle("open");
+    menuBtnChange(); //calling the function(optional)
+  });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+  </script>
+</body>
+</html>

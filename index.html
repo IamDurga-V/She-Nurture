@@ -1,0 +1,72 @@
+
+<!Doctype html>
+<html>
+    <head> 
+        <title>Search in Javascript</title>
+        <style type="text/css">
+             @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+        *{
+          font-family:'Poppins', sans-serif;
+          margin: 0%;
+          padding: 0;
+        }
+            body{
+                background: #ddd;
+            }
+            .container-fluid{
+                width:100px ;
+                height:auto;
+                padding: 0px 0px 80px 0px;
+            }
+            .container{
+                width: 1200px;
+                height: auto;
+                margin: auto;
+            }
+            .container .search{
+                display: flex;
+                padding: 30px 0px;
+                justify-content: space-between;
+            }
+
+            .container .search h1{
+                letter-spacing: 3px;
+                display: inline-block;
+                border-bottom: 2px solid green;
+                padding-bottom: 10px;
+            }
+            .container .search input{
+                width: 60%;
+                padding: 5px 16px;
+                background: transparent;
+                border: 1px solid #000;
+                font-size: 20px;
+                text-transform: capitalize;
+                letter-spacing: 3px;
+            }
+            .container .search input::placeholder
+            {
+                color: darkgreen;
+                font-weight: 500;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="container">
+                <div class="search">
+                <h1>All Products</h1>
+                <input type="text" name="" id="find" placeholder="search here....." onkeyup="search()">      
+            </div>
+
+            <div class="doctors-list">
+                <div class="doctor">
+                    <img src="" alt="image">
+                    <h3>Name</h3>
+                    <h4>Specialist</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

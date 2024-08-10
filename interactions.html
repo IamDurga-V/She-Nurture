@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMMUNITY FORUMS</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .comments-container {
+            background-image: url('yellow.jpg');
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+            margin-left: 300px;
+            margin-right: 300px;
+        }
+
+        .comment {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .comment-avatar {
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center center;
+            margin-right: 10px;
+        }
+
+        .comment-content {
+            flex: 1;
+        }
+
+        .comment-author {
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+        }
+
+        .comment-text {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .reply-link {
+            font-size: 14px;
+            color: #750351;
+            text-decoration: none;
+        }
+
+        .reply-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Community Section Styles */
+        .community-section {
+            background-color: #f9f9f9;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .community-section h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #750351;
+        }
+
+        .community-section p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* ... Your existing footer styles ... */
+
+    </style>
+</head>
+<body>
+    <!-- Community Section -->
+    <section class="community-section">
+            <h2>LET'S TALK</h2>
+            <p>Connect with others, share your progress, and get inspired!</p>
+        <div class="comments-container">
+            <div class="comment">
+                <div class="comment-avatar" style="background-image: url('profile.jpg');"></div>
+                <div class="comment-content">
+                    <p class="comment-author">ADMIN</p>
+                    <p class="comment-text">Hello Lovely Ladies! Imagine you're on a tropical island getaway! What's your go-to fun and active activity to keep your fitness journey going while enjoying the sun and sand?"</p>
+                    <a href="#" class="reply-link">Reply</a>
+                </div>
+            </div>
+            <!-- Add more comments and replies here -->
+        </div>
+    </section>
+
+    <!-- JavaScript for Replies -->
+    <script src="replies.js"></script>
+</body>
+</html>

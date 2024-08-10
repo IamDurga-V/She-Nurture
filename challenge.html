@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Challenge Schedule</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+    position: relative;
+    background-image: url('yellow.jpg');
+    height: 400px;
+    color: #000;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-text {
+    flex: 1;
+    text-align: left;
+    padding-right: 40px;
+}
+
+.header-title {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    padding: 12px 24px;
+    background-color: #750351;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #750351;
+}
+
+.header-image .image-container {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+        .container {
+            background-image:url('women.jpg');
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .challenge-card {
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .challenge-details {
+            flex: 1;
+            padding-right: 40px;
+        }
+        .challenge-title {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .challenge-description {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .challenge-list {
+            list-style-type: none;
+            padding-left: 0;
+            font-size: 18px;
+        }
+        .challenge-list li {
+            margin-bottom: 10px;
+        }
+        .challenge-image {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div class="header-text">
+                <h1 class="header-title">Join Our Fitness Challenge</h1>
+                <p>Transform your body and improve your health with our fun and effective fitness challenges!</p>
+                <button class="cta-button">Get Started</button>
+            </div>
+            <div class="header-image">
+                <img src="fh.jpg" alt="Fitness Challenge">
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="challenge-card">
+            <div class="challenge-details">
+                <h2 class="challenge-title">Month 1: Cardio Kickstart Challenge</h2>
+                <p class="challenge-description">Get your heart pumping with daily cardio exercises.</p>
+                <ul class="challenge-list">
+                    <li>Brisk walk or jog</li>
+                    <li>Jumping jacks</li>
+                    <li>Dancing or aerobics</li>
+                    <li>Cycling or biking</li>
+                </ul>
+            </div>
+            <img class="challenge-image" src="fc1.jpg.jpg" alt="Cardio Kickstart Challenge">
+        </div>
+        <!-- Add this block inside the .container div to add more challenge cards -->
+<div class="challenge-card">
+    <div class="challenge-details">
+        <h2 class="challenge-title">Month 2: Core Strength Challenge</h2>
+        <p class="challenge-description">Strengthen your core muscles with these challenging exercises.</p>
+        <ul class="challenge-list">
+            <li>Planks</li>
+            <li>Leg raises</li>
+            <li>Russian twists</li>
+            <li>Crunches</li>
+        </ul>
+    </div>
+    <img class="challenge-image" src="fc2.jpg.jpg" alt="Core Strength Challenge">
+</div>
+
+<div class="challenge-card">
+    <div class="challenge-details">
+        <h2 class="challenge-title">Month 3: Flexibility and Yoga Challenge</h2>
+        <p class="challenge-description">Improve flexibility and find balance with a variety of yoga poses.</p>
+        <ul class="challenge-list">
+            <li>Downward-facing dog</li>
+            <li>Warrior poses</li>
+            <li>Cobra pose</li>
+            <li>Tree pose</li>
+        </ul>
+    </div>
+    <img class="challenge-image" src="fc3.jpg.jpg" alt="Flexibility and Yoga Challenge">
+</div>
+
+        <!-- Add more challenge cards with similar structure -->
+    </div>
+</body>
+</html>

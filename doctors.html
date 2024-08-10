@@ -1,0 +1,434 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>She Nurture</title>
+    <style>
+        /* ... (previous styles) ... */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+        *{
+            font-family:'Poppins',sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #750351;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-image:url('yellow.jpg');
+            background-size:cover;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content:space-evenly;
+        }
+
+        .left-section {
+            flex:1;
+        }
+
+        .right-section {
+            flex: 1;
+            text-align: right;
+        }
+
+        select, button {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        button {
+            background-color: #750351;
+            color: #000;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #5b023d;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .doctor-info {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .doctor-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .doctor-details {
+            flex: 1;
+        }
+
+        .doctor-details h3 {
+            margin: 0;
+            color: #1d0215;
+        }
+
+        .doctor-details p {
+            margin: 5px 0;
+            color:rgb(2, 2, 33);
+        }
+
+        .doctor-list {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>FIND SPECIALIST FOR DISEASES</header>
+    <div class="container">
+        <div class="combined-section">
+            <label for="disease">Select Disease:</label>
+            <select id="disease" onchange="searchSpecialists()">
+                <option value="">Select Disease</option>
+                <option value="acne">ACNE</option>
+                <option value="allergy">ALLERGIES</option>
+                <option value="alzeimerdisease">ALZHEIMER'S DISEASE</option>
+                <option value="anaemia">ANAEMIA</option>
+                <option value="anxiety">ANXIETY</option>
+                <option value="arthrits">ARTHRITS</option>
+                <option value="asthama">ASTHAMA</option>
+                <option value="breastcancer">BREAST CANCER</option>
+                <option value="cancer">CANCER</option>
+                <option value="cholera">CHOLERA</option>
+                <option value="chickenpox">CHICKENPOX</option>
+                <option value="commoncold">COMMON COLD</option>
+                <option value="covid19">COVID-19</option>
+                <option value="dengue">DENGUE FEVER</option>
+                <option value="depression">DEPRESSION</option>
+                <option value="diabetes">DIABETES</option>
+                <option value="ent">ENT SPECIALIST</option>
+                <option value="flu">FLU</option>
+                <option value="gastriculcer">GASTRIC ULCER</option>
+                <option value="gastroenteritis">GASTROENTERITIS</option>
+                <option value="heartdisease">HEART DISEASE</option>
+                <option value="hepatatis">HEPATATIS</option>
+                <option value="hiv">HIV/AIDS</option>
+                <option value="hypertension">HYPERTENSION</option>
+                <option value="influenza">INFLUENZA</option>
+                <option value="insomnia">INSOMNIA</option>
+                <option value="kidneystone">KIDNEY STONE</option>
+                <option value="malaria">MALARIA</option>
+                <option value="menopause">MENOPAUSE</option>
+                <option value="migrane">MIGRANE</option>
+                <option value="pneumonia">PNEUMONIA</option>
+                <option value="ovarysyndrome">POLYCYSTIC OVARY SYNDROME</option>
+                <option value="pms">PREMENSTRUAL SYNDROME</option>
+                <option value="psoriasis">PSORIASIS</option>
+                <option value="stroke">STROKE</option>
+                <option value="uti">UNRINARY TRACT INFECTION</option>
+                <!-- Add more diseases here -->
+            </select>
+    </div>
+
+    <div class="doctor-list">
+        <!-- Doctors will be added here dynamically -->
+    </div>
+    </div>
+
+    <script>
+        function searchSpecialists() {
+            const disease = document.getElementById("disease").value;
+            const doctorListDiv = document.querySelector(".doctor-list");
+
+            // Define predefined specialists
+            const specialists = {
+                acne:[
+                    {
+                       name:"Dr. Madhumitha",
+                       qualification: "MBBS, MD-Dermatology,Venereology & Leprosy",
+                       specialist:"Dermatologist",
+                       about: "14 Years Experience Overall  (9 years as specialist)",
+                       image: "f1.jpg"
+                    },
+                    {
+                       name:"Dr. Murueshwari Durairaj",
+                       qualification: "Bachelor of Homeopathy Medicine and Surgery (BHMS) ",
+                       specialist:"Homoeopath",
+                       about: "20 Years Experience Overall",
+                       image: "f2.jpg"
+                    },
+                    {
+                       name:"Dr. Narmatha Ramachandiran",
+                       qualification: "MBBS, PG Diploma In Clinical Cosmetology (PGDCC)",
+                       specialist:"Cosmetologist",
+                       about: "13 Years Experience Overall  (6 years as specialist)",
+                       image: "f3.png"
+                    },
+                    {
+                       name:"Dr.Shabari.A",
+                       qualification: "MBBS, MD - Dermatology , Venereology & Leprosy",
+                       specialist:"Cosmetologist",
+                       about: "6 years experience overall",
+                       image: "m1.jpg"
+                    },
+                    {
+                       name:"Dr. Jamsheena P",
+                       qualification: "BHMS, MSc - Psychotherapy And Counselling",
+                       specialist:"Homeopath",
+                       about: "14 years experience overall",
+                       image: "f4.jpg"
+                    },
+                    {
+                       name:"Dr. S.Sivakumar",
+                       qualification: "MBBS, Diploma in Otorhinolaryngology (DLO), MS - General Surgery, MCh - Plastic Surgery",
+                       specialist:"Plastic Surgeon,Cosmetologist",
+                       about: "24 Years Experience Overall  (7 years as specialist)",
+                       image: "m2.jpg"
+                    },
+                ],
+                flu: [
+                    {
+                        name: "Dr. Smith",
+                        qualification: "MD, Specialist in Internal Medicine",
+                        about: "Experienced in treating flu and related respiratory illnesses.",
+                        image: "women.jpg"
+                    },
+                    {
+                        name: "Dr. Johnson",
+                        qualification: "MD, Specialist in Infectious Diseases",
+                        about: "Specialized in managing flu cases and providing preventive care.",
+                        image: "women.jpg"
+                    },
+                ],
+                covid: [
+                    {
+                        name: "Dr. Anderson",
+                        qualification: "MD, Specialist in Infectious Diseases",
+                        about: "Experienced in managing COVID-19 cases and providing preventive care.",
+                        image: "doctor3.jpg"
+                    },
+                    // Add more COVID-19 specialists here
+                ],
+                anxiety:[
+                    {
+                       name:"Dr. Madhumitha",
+                       qualification: "MBBS, MD-Dermatology,Venereology & Leprosy",
+                       specialist:"Dermatologist",
+                       about: "14 Years Experience Overall  (9 years as specialist)",
+                       image: "f1.jpg"
+                    },
+                    {
+                       name:"Dr. Murueshwari Durairaj",
+                       qualification: "Bachelor of Homeopathy Medicine and Surgery (BHMS) ",
+                       specialist:"Homoeopath",
+                       about: "20 Years Experience Overall",
+                       image: "f2.jpg"
+                    },
+                    {
+                       name:"Dr. Narmatha Ramachandiran",
+                       qualification: "MBBS, PG Diploma In Clinical Cosmetology (PGDCC)",
+                       specialist:"Cosmetologist",
+                       about: "13 Years Experience Overall  (6 years as specialist)",
+                       image: "f3.png"
+                    },
+                    {
+                       name:"Dr.Shabari.A",
+                       qualification: "MBBS, MD - Dermatology , Venereology & Leprosy",
+                       specialist:"Cosmetologist",
+                       about: "6 years experience overall",
+                       image: "m1.jpg"
+                    },
+                    {
+                       name:"Dr. Jamsheena P",
+                       qualification: "BHMS, MSc - Psychotherapy And Counselling",
+                       specialist:"Homeopath",
+                       about: "14 years experience overall",
+                       image: "f4.jpg"
+                    },
+                    {
+                       name:"Dr. S.Sivakumar",
+                       qualification: "MBBS, Diploma in Otorhinolaryngology (DLO), MS - General Surgery, MCh - Plastic Surgery",
+                       specialist:"Plastic Surgeon,Cosmetologist",
+                       about: "24 Years Experience Overall  (7 years as specialist)",
+                       image: "m2.jpg"
+                    },
+                ],
+                alzheimerdisease:[
+                    {
+                       name:"Dr. Madhumitha",
+                       qualification: "MBBS, MD-Dermatology,Venereology & Leprosy",
+                       specialist:"Dermatologist",
+                       about: "14 Years Experience Overall  (9 years as specialist)",
+                       image: "f1.jpg"
+                    },
+                    {
+                       name:"Dr. Murueshwari Durairaj",
+                       qualification: "Bachelor of Homeopathy Medicine and Surgery (BHMS) ",
+                       specialist:"Homoeopath",
+                       about: "20 Years Experience Overall",
+                       image: "f2.jpg"
+                    },
+                    {
+                       name:"Dr. Narmatha Ramachandiran",
+                       qualification: "MBBS, PG Diploma In Clinical Cosmetology (PGDCC)",
+                       specialist:"Cosmetologist",
+                       about: "13 Years Experience Overall  (6 years as specialist)",
+                       image: "f3.png"
+                    },
+                    {
+                       name:"Dr.Shabari.A",
+                       qualification: "MBBS, MD - Dermatology , Venereology & Leprosy",
+                       specialist:"Cosmetologist",
+                       about: "6 years experience overall",
+                       image: "m1.jpg"
+                    },
+                    {
+                       name:"Dr. Jamsheena P",
+                       qualification: "BHMS, MSc - Psychotherapy And Counselling",
+                       specialist:"Homeopath",
+                       about: "14 years experience overall",
+                       image: "f4.jpg"
+                    },
+                    {
+                       name:"Dr. S.Sivakumar",
+                       qualification: "MBBS, Diploma in Otorhinolaryngology (DLO), MS - General Surgery, MCh - Plastic Surgery",
+                       specialist:"Plastic Surgeon,Cosmetologist",
+                       about: "24 Years Experience Overall  (7 years as specialist)",
+                       image: "m2.jpg"
+                    },
+                ],
+                anaemia:[
+                    {
+                       name:"Dr. Madhumitha",
+                       qualification: "MBBS, MD-Dermatology,Venereology & Leprosy",
+                       specialist:"Dermatologist",
+                       about: "14 Years Experience Overall  (9 years as specialist)",
+                       image: "f1.jpg"
+                    },
+                    {
+                       name:"Dr. Murueshwari Durairaj",
+                       qualification: "Bachelor of Homeopathy Medicine and Surgery (BHMS) ",
+                       specialist:"Homoeopath",
+                       about: "20 Years Experience Overall",
+                       image: "f2.jpg"
+                    },
+                    {
+                       name:"Dr. Narmatha Ramachandiran",
+                       qualification: "MBBS, PG Diploma In Clinical Cosmetology (PGDCC)",
+                       specialist:"Cosmetologist",
+                       about: "13 Years Experience Overall  (6 years as specialist)",
+                       image: "f3.png"
+                    },
+                    {
+                       name:"Dr.Shabari.A",
+                       qualification: "MBBS, MD - Dermatology , Venereology & Leprosy",
+                       specialist:"Cosmetologist",
+                       about: "6 years experience overall",
+                       image: "m1.jpg"
+                    },
+                    {
+                       name:"Dr. Jamsheena P",
+                       qualification: "BHMS, MSc - Psychotherapy And Counselling",
+                       specialist:"Homeopath",
+                       about: "14 years experience overall",
+                       image: "f4.jpg"
+                    },
+                    {
+                       name:"Dr. S.Sivakumar",
+                       qualification: "MBBS, Diploma in Otorhinolaryngology (DLO), MS - General Surgery, MCh - Plastic Surgery",
+                       specialist:"Plastic Surgeon,Cosmetologist",
+                       about: "24 Years Experience Overall  (7 years as specialist)",
+                       image: "m2.jpg"
+                    }
+                ],
+                asthama:[
+                    {
+                       name:"Dr. Madhumitha",
+                       qualification: "MBBS, MD-Dermatology,Venereology & Leprosy",
+                       specialist:"Dermatologist",
+                       about: "14 Years Experience Overall  (9 years as specialist)",
+                       image: "f1.jpg"
+                    },
+                    {
+                       name:"Dr. Murueshwari Durairaj",
+                       qualification: "Bachelor of Homeopathy Medicine and Surgery (BHMS) ",
+                       specialist:"Homoeopath",
+                       about: "20 Years Experience Overall",
+                       image: "f2.jpg"
+                    },
+                    {
+                       name:"Dr. Narmatha Ramachandiran",
+                       qualification: "MBBS, PG Diploma In Clinical Cosmetology (PGDCC)",
+                       specialist:"Cosmetologist",
+                       about: "13 Years Experience Overall  (6 years as specialist)",
+                       image: "f3.png"
+                    },
+                    {
+                       name:"Dr.Shabari.A",
+                       qualification: "MBBS, MD - Dermatology , Venereology & Leprosy",
+                       specialist:"Cosmetologist",
+                       about: "6 years experience overall",
+                       image: "m1.jpg"
+                    },
+                    {
+                       name:"Dr. Jamsheena P",
+                       qualification: "BHMS, MSc - Psychotherapy And Counselling",
+                       specialist:"Homeopath",
+                       about: "14 years experience overall",
+                       image: "f4.jpg"
+                    },
+                    {
+                       name:"Dr. S.Sivakumar",
+                       qualification: "MBBS, Diploma in Otorhinolaryngology (DLO), MS - General Surgery, MCh - Plastic Surgery",
+                       specialist:"Plastic Surgeon,Cosmetologist",
+                       about: "24 Years Experience Overall  (7 years as specialist)",
+                       image: "m2.jpg"
+                    }
+                ]
+                // Add more diseases and specialists here
+            };
+
+            const specialistList = specialists[disease];
+            if (specialistList) {
+                doctorListDiv.innerHTML = "";
+
+                specialistList.forEach((specialist) => {
+                    const doctorInfo = `
+                        <div class="doctor-info">
+                            <img class="doctor-image" src="${specialist.image}" alt="Doctor">
+                            <div class="doctor-details">
+                                <h3>${specialist.name}</h3>
+                                <p>${specialist.qualification}</p>
+                                <p>${specialist.specialist}</p>
+                                <p>${specialist.about}</p>
+                            </div>
+                        </div>
+                    `;
+                    doctorListDiv.innerHTML += doctorInfo;
+                });
+            } else {
+                doctorListDiv.innerHTML = "";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+*{
+  font-family:'Poppins', sans-serif;
+}
+body {
+  background-color: #f5f5f5;
+        padding-top: 0px;
+
+}
+.body-background{
+  background-image: url('shenurture.jpg.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height:742px;
+  display: flex;
+  align-items: center;
+}
+
+.frontpage-text {
+  text-align: center;
+  color:#000000;
+}
+
+.frontpage-title {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  background: linear-gradient(to left,
+                violet,
+                indigo,
+                blue,
+                green,
+                yellow,
+                orange,
+                red);
+ -webkit-background-clip: text;
+  color: transparent;
+}
+
+.frontpage-description {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.get-started-btn {
+  background-color:pink;
+  color:#000000;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: black;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.get-started-btn:hover {
+  background-color: white;
+}
+@media (max-width: 768px) {
+.navbar-nav {
+flex-direction: column;
+}
+.nav-item {
+margin-bottom: 2px;
+
+}
+.navbar-collapse {
+background-color: #f5f5f5;
+padding: 10px;
+}
+}
+.nav{
+    color:blue;
+}
+.navbar-brand {
+  }
+
+.section {
+  padding: 60px 0;
+}
+
+.text {
+  text-align: center;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.description {
+  font-size: 18px;
+  color: #666666;
+  max-width: 800px;
+  margin: 0 auto;
+  }
+  
+.item {
+  margin-bottom: 30px;
+}
+
+.subtitle {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.date {
+  font-size: 18px;
+  color: #999999;
+}
